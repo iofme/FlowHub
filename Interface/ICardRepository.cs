@@ -10,6 +10,8 @@ namespace API.Interface
     {
         Task<Card> GetCardById(int id);
         Task<IEnumerable<Card>> GetAllCardsAsync();
-        
+        Task<Card> CreateCardAsync(Card card);
+        Task<Card> UpdateCardAsync(Card card);
+        Task<Card> DeleteCardAsync(int id);
     }
 }
