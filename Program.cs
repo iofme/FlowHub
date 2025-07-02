@@ -26,7 +26,8 @@ builder.Services.AddIdentity<User, AppRole>(
         opt.Password.RequireUppercase = false;
         opt.Password.RequireLowercase = false;
 
-        opt.User.AllowedUserNameCharacters = null!;
+        opt.User.AllowedUserNameCharacters = null!
+    ;
     }
 ).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 

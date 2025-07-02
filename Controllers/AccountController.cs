@@ -42,7 +42,7 @@ namespace API.Controllers
             };
         }
 
-        [HttpPost("Login")]
+        [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO)
         {
             var user = await userManager.Users.FirstOrDefaultAsync(x => x.NormalizedUserName == loginDTO.UserName.ToUpper());
