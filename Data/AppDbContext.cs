@@ -13,6 +13,7 @@ namespace API.Data
     {
         public DbSet<Card> Card { get; set; }
         public DbSet<List> List { get; set; }
+        public DbSet<Group> Groups { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

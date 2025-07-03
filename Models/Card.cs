@@ -10,7 +10,5 @@ namespace API.Models
         public required string Atribuido { get; set; }
         public required DateTime DataDeFinalizacao { get; set; }
         public DateTime DataDeCriacao { get; set; } = DateTime.Now;
-        public int IdLista { get; set; }
-        public int Posicao { get; set; }
     }
 }
