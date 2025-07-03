@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.DTOs;
 using API.Interface;
 using API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -22,6 +23,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<List>> CreateList(ListDTO listDTO)
         {
             var listCreated = new List
@@ -35,6 +37,7 @@ namespace API.Controllers
         }
 
         [HttpPost("{idCard:int}/{idList:int}")]
+        [Authorize]
         public async Task<ActionResult<List>> AddCardByList(int idCard, int idList)
         {
             var card = await unitOfWork.CardRepository.GetCardById(idCard);

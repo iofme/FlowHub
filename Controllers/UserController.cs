@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.DTOs;
 using API.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -12,6 +13,7 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class UserController(IUnitOfWork unitOfWork) : ControllerBase
     {
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetAllUser()
         {

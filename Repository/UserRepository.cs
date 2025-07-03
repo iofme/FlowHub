@@ -12,9 +12,9 @@ namespace API.Repository
 {
     public class UserRepository(AppDbContext context) : IUserRepository
     {
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByUsernameAsync(string username)
         {
-            return await context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            return await context.Users.FirstOrDefaultAsync(u => u.UserName == username);
         }
 
         public async Task<IEnumerable<User>> GetUsersAsync()
