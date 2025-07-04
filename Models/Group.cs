@@ -10,6 +10,6 @@ namespace API.Models
         public int Id { get; set; }
         public required string DisplayName { get; set; }
         public List<List>? Listas { get; set; }
-        public required List<User> User { get; set; }
+        public List<User>? User { get; set; }
     }
 }

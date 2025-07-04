@@ -10,6 +10,7 @@ namespace API.Interface
         ICardRepository CardRepository { get; }
         IListRepository ListRepository { get; }
         IUserRepository UserRepository { get; }
+        IGroupRepository GroupRepository{ get; }
         void Commit();
     }
 }
