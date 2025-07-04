@@ -31,12 +31,12 @@ namespace API.Repository
 
         public async Task<IEnumerable<Card>> GetAllCardsAsync()
         {
-            return await context.Card.ToListAsync();
+            return await context.Card.AsNoTracking().ToListAsync();
         }
 
         public async Task<Card> GetCardById(int id)
         {
-            return await context.Card.FirstOrDefaultAsync(c => c.Id == id);
+            return await context.Card.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<Card> UpdateCardAsync(Card card)

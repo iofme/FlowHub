@@ -15,7 +15,7 @@ namespace API.Repository
         {
             var groupSelect = await context.Groups.Include(g => g.User).FirstOrDefaultAsync(g => g.Id == group.Id);
 
-            groupSelect.User.Add(user);
+            groupSelect!.User!.Add(user);
 
             await context.SaveChangesAsync();
             
@@ -44,7 +44,7 @@ namespace API.Repository
             return await context.Groups.Include(g => g.User).Include(g => g.Listas).ToListAsync();
         }
 
-        public async Task<Group> GetGroupById(int id)
+        public async Task<Group?> GetGroupById(int id)
         {
             return await context.Groups.FirstOrDefaultAsync(g => g.Id == id);
         }
@@ -53,7 +53,5 @@ namespace API.Repository
         {
             return await context.Groups.Include(g => g.User.Contains(user)).ToListAsync();
         }
-
-        
     }
 }

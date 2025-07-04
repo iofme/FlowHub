@@ -8,6 +8,7 @@ namespace API.Models
         public required string Cargo { get; set; }
         public List<Card>? Cards { get; set; }
         public string? ImgUrl { get; set; }
+        public List<DescricaoUser>? Descrição { get; set; }
 
         public string? RefreshToken { get; set; }
         public DateTime? RefreshRokenExpiry { get; set; }

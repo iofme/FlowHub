@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -24,7 +20,7 @@ namespace API.Data
                     new IdentityRole { Id = "mediador-id", Name = "Mediador", NormalizedName = "MEDIADOR" },
                     new IdentityRole { Id = "rh-id", Name = "Rh", NormalizedName = "RH" },
                     new IdentityRole { Id = "financeiro-id", Name = "Financeiro", NormalizedName = "FINANCEIRO" },
-                    new IdentityRole { Id = "Lideranca-id", Name = "Lideranca", NormalizedName = "LIDERANCA" }
+                    new IdentityRole { Id = "lideranca-id", Name = "Lideranca", NormalizedName = "LIDERANCA" }
                 );
         }
     }
